@@ -1,0 +1,21 @@
+body{
+  background-color: #6294ba;
+  color: white;
+  font-size: 24px;
+}
+
+div{
+  background-color: white;
+  width: 300px;
+  height: 300px;
+}
+
+p{
+  color: #3c538f;
+  font-size: 16px;
+}
+
+.hero{
+  font-size: 50px;
+  text-align: center;
+}
