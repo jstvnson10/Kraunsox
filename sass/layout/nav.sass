@@ -5,8 +5,18 @@
   right: 0
   left: 100%
   font-size: 1.2rem
+
   overflow: hidden
+
   transition: all ease-in-out 250ms
+  @media(min-width: 725px)
+    position: relative
+    flex: auto
+    background: none
+    margin-top: 2em
+    margin-left: 5em
+    font-size: 1rem
+    text-align: right
 
 
   ul
@@ -15,15 +25,24 @@
     justify-content: space-around
     text-align: center
     height: 100vh
+    @media(min-width: 725px)
+      flex-direction: row
+      height: auto
+
+
 
   li
     flex: 1 1 auto
     border-bottom: 1px solid #D64D5A
     display: flex
-
+    @media(min-width:725px)
+      border-bottom: none
 
     &:hover
-        background: darken($accent, 5%)
+      background: $accent
+      @media(min-width: 725px)
+        background: none
+        color: $accent
   a
     color: $text-inverse
     text-decoration: none
@@ -31,6 +50,8 @@
     display: flex
     align-items: center
     justify-content: center
+    @media(min-width: 725px)
+      justify-content: flex-end
 
   &.is-open
     left: 0
@@ -39,11 +60,13 @@
 
 .nav-toggle
   display: block
-  padding: 1em
+  padding: 2em
   position: absolute
   right: 1em
   top: 1em
   cursor: pointer
+  @media(min-width: 725px)
+    display: none
 
 
 .hamburger, .hamburger::before, .hamburger::after
