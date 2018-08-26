@@ -467,9 +467,17 @@ h2 {
   margin: .75em 0;
 }
 
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+}
+
 .head-ann {
   position: absolute;
-  top: .25em;
+  top: 0;
   left: 0;
   right: 0;
   height: 2em;
@@ -486,19 +494,12 @@ h2 {
   height: 2em;
 }
 
-.main-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 1em;
-}
-
 .logo {
   position: absolute;
   width: 20%;
   min-width: 10em;
   max-width: 15em;
+  margin-top: 1em;
 }
 
 .main-nav {
@@ -521,10 +522,11 @@ h2 {
     -ms-flex: auto;
     flex: auto;
     background: none;
-    margin-top: 2em;
-    margin-left: 5em;
-    font-size: 1rem;
+    margin-top: 3em;
+    margin-left: auto;
+    font-size: 1.2rem;
     text-align: right;
+    left: 0;
   }
 }
 
@@ -538,7 +540,6 @@ h2 {
   flex-direction: column;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  text-align: center;
   height: 100vh;
 }
 
@@ -564,18 +565,20 @@ h2 {
 
 @media (min-width: 725px) {
   .main-nav li {
+    display: inline-block;
     border-bottom: none;
+    text-align: right;
   }
 }
 
 .main-nav li:hover {
-  background: #d62839;
+  background: #db3d4c;
 }
 
 @media (min-width: 725px) {
   .main-nav li:hover {
     background: none;
-    color: #d62839;
+    color: black;
   }
 }
 
@@ -597,9 +600,7 @@ h2 {
 
 @media (min-width: 725px) {
   .main-nav a {
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    display: inline;
   }
 }
 
@@ -667,8 +668,8 @@ h2 {
   background: -o-linear-gradient(left, #2274a5, #36c6ff);
   background: linear-gradient(to right, #2274a5, #36c6ff);
   color: white;
-  padding-top: 8em;
-  padding-bottom: 8em;
+  padding-top: 8.5em;
+  padding-bottom: 8.5em;
   text-align: center;
 }
 
@@ -677,12 +678,28 @@ h2 {
     text-align: left;
     padding-bottom: 0;
     height: 80vmin;
+    min-height: 500px;
   }
 }
 
 @media (min-width: 725px) {
   .hero-text {
     margin-top: 10vmax;
+  }
+}
+
+@media (min-width: 725px) {
+  .hero-img {
+    position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 4em;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -701,7 +718,7 @@ h2 {
   padding: 0 .75em;
 }
 
-@media (min-width: 725) {
+@media (min-width: 725px) {
   .col:first-of-type {
     padding-left: 0;
   }
@@ -760,13 +777,16 @@ a {
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  width: 80%;
   margin: 0 auto;
 }
 
-a {
+.nav--footer a {
   text-decoration: none;
   font-weight: bold;
+}
+
+.container--footer {
+  max-width: 25em;
 }
 
 .abouts {
